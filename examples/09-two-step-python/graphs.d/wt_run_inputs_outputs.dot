@@ -1,0 +1,21 @@
+
+digraph wt_run {
+rankdir=LR
+fontname=Courier; fontsize=18; labelloc=t
+label="Run Inputs and Outputs"
+node[shape=box style="filled" fillcolor="#FFFFFF" peripheries=2 fontname=Courier]
+"09-two-step-python"
+subgraph cluster_inputs { label=""; color=white; penwidth=0
+subgraph cluster_inputs_inner { label=""; color=white
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+"input:./inputs/daily-total-female-births.csv" [label="./inputs/daily-total-female-births.csv"]
+}}
+subgraph cluster_outputs { label=""; color=white; penwidth=0
+subgraph cluster_outputs_inner { label=""; color=white
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+"output:./outputs/female-daily-births.png" [label="./outputs/female-daily-births.png"]
+}}
+"input:./inputs/daily-total-female-births.csv" -> "09-two-step-python"
+"09-two-step-python" -> "output:./outputs/female-daily-births.png"
+}
+
