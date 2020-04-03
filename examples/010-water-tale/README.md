@@ -5,10 +5,6 @@ This notebook is intended to demonstrate how Whole Tale can be used to create in
 
 > Daniel White and Lilian Alessa. Humans and Hydrology at High Latitudes: Water Use Information. Arctic Data Center. [doi:10.5065/D6862DM8](doi:10.5065/D6862DM8).
 
-## Contents:
-
-[`repo2docker` compatible configuration files](https://repo2docker.readthedocs.io/en/latest/config_files.html):
-
-* `apt.txt`: Debian apt packages
-* `requirements.txt`: Python packages
-* `postBuild`: Run after environment is built
+## Notes:
+1. The notebook reads the excel document in `./inputs/` and writes the html file in `./outputs/`
+1. This is an example where Reprozip misses an input
