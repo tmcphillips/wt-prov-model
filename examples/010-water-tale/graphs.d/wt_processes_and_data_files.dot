@@ -1,0 +1,29 @@
+
+digraph wt_run {
+rankdir=LR
+fontname=Courier; fontsize=18; labelloc=t
+label="Processes and Data Files"
+subgraph cluster_inputs { label=""; color=white; penwidth=0
+subgraph cluster_inputs_inner { label=""; color=white
+node[shape=box style="filled" fillcolor="#CCFFCC" peripheries=1 fontname=Courier]
+"exe:e8" [label="/sbin/ip"]
+"exe:e9" [label="/bin/sh"]
+"exe:e10" [label="/bin/uname"]
+"exe:e11" [label="/home/repro/.venv/reprozip/bin/python3"]
+"exe:e12" [label="/bin/sh"]
+"exe:e13" [label="/bin/uname"]
+"exe:e2" [label="/home/repro/.venv/reprozip/bin/pip3"]
+"exe:e14" [label="/sbin/ip"]
+"exe:e3" [label="/bin/uname"]
+"exe:e4" [label="/bin/sh"]
+"exe:e5" [label="/bin/uname"]
+"exe:e7" [label="/home/repro/.venv/reprozip/bin/jupyter-nbconvert"]
+"exe:e6" [label="/home/repro/.venv/reprozip/bin/jupyter"]
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+"access:i3701" [label="./outputs/wt_quickstart.html"]
+"access:i7" [label="./outputs"]
+"exe:e7" -> "access:i3701"
+"exe:e6" -> "access:i3701"
+}}
+}
+

@@ -1,0 +1,27 @@
+{
+  "@context": [
+    {
+      "prov": "http://www.w3.org/ns/prov#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "tale_execution",
+      "@type": "prov:Activity",
+      "prov:used": [
+        {
+          "@id": "file://./inputs/daily-total-female-births.csv"
+        }
+      ]
+    },
+    {
+      "@id": "file://./inputs/daily-total-female-births.csv",
+      "@type": "prov:Entity"
+    },
+    {
+      "@id": "file://./outputs/female-daily-births.png",
+      "@type": "prov:Entity",
+      "prov:wasGeneratedBy": "tale_execution"
+    }
+  ]
+}

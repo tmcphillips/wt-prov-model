@@ -1,0 +1,21 @@
+
+digraph wt_run {
+rankdir=LR
+fontname=Courier; fontsize=18; labelloc=t
+label="Processes and Data Files"
+subgraph cluster_inputs { label=""; color=white; penwidth=0
+subgraph cluster_inputs_inner { label=""; color=white
+node[shape=box style="filled" fillcolor="#CCFFCC" peripheries=1 fontname=Courier]
+"exe:e6" [label="/home/repro/.venv/reprozip/bin/python3"]
+"exe:e5" [label="/bin/uname"]
+"exe:e4" [label="/bin/sh"]
+"exe:e3" [label="/bin/uname"]
+"exe:e2" [label="/home/repro/.venv/reprozip/bin/pip3"]
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+"access:i1740" [label="./outputs/female-daily-births.png"]
+"access:i1732" [label="./inputs/daily-total-female-births.csv"]
+"exe:e6" -> "access:i1740"
+"access:i1732" -> "exe:e6"
+}}
+}
+

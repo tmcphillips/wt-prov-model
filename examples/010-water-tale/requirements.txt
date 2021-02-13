@@ -1,0 +1,4 @@
+notebook
+bokeh
+pandas
+xlrd
